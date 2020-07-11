@@ -1,6 +1,5 @@
 package com.spring.web.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,12 +17,6 @@ public class HomeController {
     @RequestMapping("/inicio")
     public String index() {
         return "inicio";
-    }
-
-    //responde a la ruta /hello/vista y deriva a JSP
-    @RequestMapping("/vista")
-    public String vista() {
-        return "index.jsp";
     }
 
     //ruta con parametros dinamicos en url
