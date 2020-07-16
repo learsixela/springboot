@@ -1,20 +1,35 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
-    <meta charset="ISO-8859-1">
-    <title>index</title>
+    <style>
+        td {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        h1 {
+            margin-left: 20px;
+        }
+    </style>
+    <title>Gym y Deportistas</title>
 </head>
 <body>
-<div class="container">
-    <h1> Hellow JSP World!</h1>
-</div>
+<h1>Informacion</h1>
+<table>
+    <thead>
+    <th>Nombre Gym</th>
+    <th>Deportista</th>
+    </thead>
+    <tbody>
+    <c:forEach var="gim" items="${gimnasios}">
+        <tr>
+            <td>${gim.nombre}</td>
+            <td>${gim.listaDeportista.size()} Deportistas</td>
+        </tr>
+    </c:forEach>
+    </tbody>
+</table>
 </body>
 </html>

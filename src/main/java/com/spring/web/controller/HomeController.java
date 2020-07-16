@@ -22,7 +22,9 @@ public class HomeController {
     //ruta con parametros dinamicos en url
     //ej: /hello/fecha/2020/01/01
     @RequestMapping("/fecha/{anio}/{mes}/{dia}")
-    public String showLesson(@PathVariable("anio") String anio, @PathVariable("mes") String mes, @PathVariable("dia") String dia){
+    public String showLesson(@PathVariable("anio") String anio,
+                             @PathVariable("mes") String mes,
+                             @PathVariable("dia") String dia){
         return "Año: " + anio + "- Mes: " + mes + "- Día: " + dia;
     }
 
